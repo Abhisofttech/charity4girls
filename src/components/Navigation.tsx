@@ -1,27 +1,32 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Menu, Home, Mail, Heart, Info } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export const Navigation = () => {
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Contact", path: "/contact" },
-    { name: "Donate", path: "/donate" },
-    { name: "About Us", path: "/about" },
+    { name: "Home", path: "/", icon: Home },
+    { name: "Contact", path: "/contact", icon: Mail },
+    { name: "Donate", path: "/donate", icon: Heart },
+    { name: "About Us", path: "/about", icon: Info },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
       <div className="container flex items-center justify-between h-16">
-        <div className="text-lg font-medium text-primary">CharityForGirl</div>
+        <div className="flex items-center gap-2 text-lg font-medium text-primary">
+          <Heart className="w-6 h-6" /> CharityForGirl
+        </div>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <Button key={item.name} variant="ghost" asChild>
-              <Link to={item.path}>{item.name}</Link>
+              <Link to={item.path} className="flex items-center gap-2">
+                <item.icon className="w-4 h-4" />
+                {item.name}
+              </Link>
             </Button>
           ))}
         </div>
@@ -37,7 +42,10 @@ export const Navigation = () => {
             <div className="flex flex-col gap-4 mt-8">
               {navItems.map((item) => (
                 <Button key={item.name} variant="ghost" asChild className="w-full justify-start">
-                  <Link to={item.path}>{item.name}</Link>
+                  <Link to={item.path} className="flex items-center gap-2">
+                    <item.icon className="w-4 h-4" />
+                    {item.name}
+                  </Link>
                 </Button>
               ))}
             </div>
