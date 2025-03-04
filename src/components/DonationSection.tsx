@@ -1,6 +1,5 @@
-
-import { QrCode } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { QrCodeDisplay } from "./QrCodeDisplay";
 
 export const DonationSection = () => {
   return (
@@ -35,14 +34,7 @@ export const DonationSection = () => {
             </Button>
           </div>
           
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <div className="aspect-square bg-gray-100 rounded-lg flex items-center justify-center">
-              <QrCode className="w-full h-full p-8" />
-            </div>
-            <p className="text-center mt-4 text-sm text-muted-foreground">
-              Scan to donate directly
-            </p>
-          </div>
+          <QrCodeDisplay />
         </div>
       </div>
     </div>
