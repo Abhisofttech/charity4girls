@@ -8,12 +8,12 @@ const carouselItems = [
   {
     title: "Empowering Girls Through Education",
     description: "Every girl deserves the opportunity to learn, grow, and achieve her dreams.",
-    image: "/placeholder.svg"
+    image: "/images/crousal1.webp"
   },
   {
     title: "Building Future Leaders",
     description: "Supporting skills development and leadership training for young girls.",
-    image: "/placeholder.svg"
+    image: "/images/lab.jpg"
   },
   {
     title: "Creating Lasting Change",
@@ -33,7 +33,7 @@ export const HeroCarousel = () => {
   }, []);
 
   return (
-    <div className="relative h-[600px] w-full overflow-hidden">
+    <div className="relative h-[55vh]  w-full overflow-hidden">
       {carouselItems.map((item, index) => (
         <div
           key={index}

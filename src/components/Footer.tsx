@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">CharityForGirl</h3>
+            <h3 className="text-xl font-bold mb-4">New Shiny Media & Social Welfare Association</h3>
             <p className="text-gray-400">
               Empowering girls through education, skills development, and creating
               opportunities for a brighter future.
@@ -29,11 +29,11 @@ export const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>contact@charityforgirl.org</span>
+                <span>sunitasri74@gmail.com</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>9560638073</span>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />

@@ -9,9 +9,11 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <main>
+      <main className="pt-16">
+        <div className="w-full flex justify-center items-center py-4 text-[16px] lg:text-[24px] font-bold bg-[#5CA62D] text-white"> New Shiny Media & Social Welfare Association</div>
+      <DonationSection />
         <HeroCarousel />
-        <DonationSection />
+       
       </main>
 
       <Footer />
