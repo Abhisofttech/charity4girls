@@ -18,7 +18,7 @@ export const QrCodeDisplay = ({ size = "32", className = "" }: QrCodeDisplayProp
       <p className="text-center my-2 lg:my-6 text-lg lg:text-xl xl:text-2xl font-bold  text-[#5CA62D]">
         Scan to donate directly
       </p>
-      <div className="w-full flex justify-around">
+      <div className="w-full flex justify-around md:px-[100px] lg:px-[50px] xl:px-[100px]">
         <Button size="sm" className="hover:bg-[#5CA62D] text-[#5CA62D] border-[1px] border-[#5CA62D] hover:text-[#fff] bg-[#fffff] font-bold lg:text-lg xl:text-xl">
           <Download className="w-6 h-6" />
          

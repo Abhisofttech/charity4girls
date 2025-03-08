@@ -1,67 +1,119 @@
-
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { Heart, Book, Users, Trophy } from "lucide-react";
+import { Computer, Coffee, ScrollText, UserCircle } from "lucide-react";
+import { motion } from "framer-motion";
 
 const About = () => {
+  const fadeIn = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="container py-32">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8 animate-fade-in">About Us</h1>
+        <div className="max-w-5xl mx-auto">
+          <motion.h1 
+            className="text-5xl font-bold mb-12 text-center"
+            style={{ color: '#5CA62D' }}
+            {...fadeIn}
+          >
+            About Us
+          </motion.h1>
           
-          <div className="prose max-w-none space-y-8 animate-fade-in">
-            <p className="text-lg text-muted-foreground">
-              CharityForGirl is dedicated to empowering girls through education, skill development, and creating opportunities for their growth. We believe that every girl deserves the chance to pursue her dreams and reach her full potential.
-            </p>
+          <div className="space-y-16">
+            <motion.p 
+              className="text-xl text-center max-w-3xl mx-auto leading-relaxed"
+              {...fadeIn}
+            >
+              Founded in 2023, our NGO is committed to empowering underprivileged girls by providing them with essential computer education at a minimal cost. In today's world, where artificial intelligence and digital skills have become the foundation of most jobs, many underprivileged girls remain deprived of even the most basic computer knowledge.
+            </motion.p>
             
-            <div className="grid sm:grid-cols-2 gap-8 my-12">
-              <div className="p-6 bg-card rounded-lg shadow-sm">
-                <Heart className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
-                <p className="text-muted-foreground">
-                  To provide educational opportunities and support for girls in underserved communities.
+            <motion.div 
+              className="grid sm:grid-cols-2 gap-10"
+              variants={{
+                initial: { opacity: 0 },
+                animate: { opacity: 1, transition: { staggerChildren: 0.2 } }
+              }}
+              initial="initial"
+              animate="animate"
+            >
+              <motion.div className="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow" variants={fadeIn}>
+                <Computer className="w-16 h-16 mb-6" style={{ color: '#5CA62D' }} />
+                <h3 className="text-2xl font-semibold mb-4" style={{ color: '#5CA62D' }}>Digital Education</h3>
+                <p className="text-gray-600 text-lg">
+                  Providing essential computer education to bridge the digital divide and create opportunities.
                 </p>
-              </div>
+              </motion.div>
               
-              <div className="p-6 bg-card rounded-lg shadow-sm">
-                <Book className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Education First</h3>
-                <p className="text-muted-foreground">
-                  We believe education is the key to breaking cycles of poverty and creating lasting change.
+              <motion.div className="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow" variants={fadeIn}>
+                <Coffee className="w-16 h-16 mb-6" style={{ color: '#5CA62D' }} />
+                <h3 className="text-2xl font-semibold mb-4" style={{ color: '#5CA62D' }}>Nutritional Support</h3>
+                <p className="text-gray-600 text-lg">
+                  Free one-time meal program to support students' learning journey and well-being.
                 </p>
-              </div>
+              </motion.div>
               
-              <div className="p-6 bg-card rounded-lg shadow-sm">
-                <Users className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Community Impact</h3>
-                <p className="text-muted-foreground">
-                  We've helped over 10,000 girls access quality education and skill development programs.
+              <motion.div className="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow" variants={fadeIn}>
+                <ScrollText className="w-16 h-16 mb-6" style={{ color: '#5CA62D' }} />
+                <h3 className="text-2xl font-semibold mb-4" style={{ color: '#5CA62D' }}>Certifications</h3>
+                <p className="text-gray-600 text-lg">
+                  Fully documented and recognized with Darpan, 12A, and ATG certifications.
                 </p>
-              </div>
+              </motion.div>
               
-              <div className="p-6 bg-card rounded-lg shadow-sm">
-                <Trophy className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Success Stories</h3>
-                <p className="text-muted-foreground">
-                  Our graduates have gone on to become leaders in their communities and various professional fields.
+              <motion.div className="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow" variants={fadeIn}>
+                <UserCircle className="w-16 h-16 mb-6" style={{ color: '#5CA62D' }} />
+                <h3 className="text-2xl font-semibold mb-4" style={{ color: '#5CA62D' }}>Leadership</h3>
+                <p className="text-gray-600 text-lg">
+                  Led by Sunita Srivastava, an experienced educator with B.A., B.Ed., and NTT qualifications.
                 </p>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
             
-            <div className="animate-fade-in-slow">
-              <h2 className="text-2xl font-bold mb-4">Our Impact</h2>
-              <p className="text-muted-foreground mb-6">
-                Since our founding, we have:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                <li>Provided scholarships to over 5,000 girls</li>
-                <li>Built or renovated 50+ schools in underserved areas</li>
-                <li>Trained 1,000+ teachers in modern education methods</li>
-                <li>Developed mentorship programs connecting students with professional women</li>
+            <motion.div 
+              className="bg-[#5CA62D] p-10 rounded-xl shadow-lg"
+              {...fadeIn}
+            >
+              <motion.h2 
+                className="text-4xl font-bold mb-6 text-center bg-red-600 text-white py-4 rounded-lg shadow-md"
+                animate={{ 
+                  scale: [1, 1.02, 1],
+                  backgroundColor: ['#dc2626', '#ea580c', '#dc2626']
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                Current Status & Support Needed
+              </motion.h2>
+              <motion.p 
+                className="text-white text-lg mb-8 font-medium"
+                animate={{ scale: [1, 1.01, 1] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                Our initiative is temporarily on hold due to financial constraints. We need support for:
+              </motion.p>
+              <ul className="space-y-4 text-lg  pl-8 text-[#fff]">
+                <li className="list-disc">Three months' advance rent for the learning center</li>
+                <li className="list-disc">Teacher salaries and staff compensation</li>
+                <li className="list-disc">Electricity bills and operational costs</li>
+                <li className="list-disc">Educational materials and computer equipment</li>
               </ul>
-            </div>
+            </motion.div>
+
+            <motion.div 
+              className="text-center py-10"
+              {...fadeIn}
+            >
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We strongly believe that education is the key to breaking the cycle of poverty. Your support can help us restart and sustain this initiative, creating opportunities for underprivileged girls to succeed in the digital age.
+              </p>
+            </motion.div>
           </div>
         </div>
       </main>
