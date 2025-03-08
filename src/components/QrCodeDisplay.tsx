@@ -1,5 +1,6 @@
 
-import { QrCode } from "lucide-react";
+import { Download, HandHelping, QrCode, Share2 } from "lucide-react";
+import { Button } from "./ui/button";
 
 interface QrCodeDisplayProps {
   size?: string;
@@ -8,15 +9,27 @@ interface QrCodeDisplayProps {
 
 export const QrCodeDisplay = ({ size = "32", className = "" }: QrCodeDisplayProps) => {
   return (
-    <div className={` p-6 rounded-lg shadow-lg flex flex-col lg:flex-row items-center ${className}`}>
-      <div className="aspect-square w-full max-w-[260px] bg-gray-100 rounded-lg flex items-center justify-center">
+    <div className={` p-6 rounded-lg shadow-lg flex flex-col  items-center ${className}`}>
+      <div className="aspect-square w-[200px] h-[260px] lg:w-[235px] lg:h-[315px] xl:w-[260px] xl:h-[340px] bg-gray-100 rounded-lg flex items-center justify-center">
         {/* <QrCode className="w-32 h-32" /> */}
 
-        <img src="/images/DummyQR.webp" alt="QR Code" className="h-full w-full object-cover border-2 border-[#5CA62D] rounded-md" />
+        <img src="/images/shinyMediaQR.jpg" alt="QR Code" className="h-full w-full object-cover border-2 border-[#5CA62D] rounded-md" />
       </div>
-      <p className="text-center mt-4 text-lg font-bold  text-[#5CA62D]">
+      <p className="text-center my-2 text-lg font-bold  text-[#5CA62D]">
         Scan to donate directly
       </p>
+      <div className="w-full flex justify-around">
+        <Button size="sm" className="hover:bg-[#5CA62D] text-[#5CA62D] border-[1px] border-[#5CA62D] hover:text-[#fff] bg-[#fffff] font-bold">
+          <Download className="w-6 h-6" />
+         
+          Download
+        </Button>
+        <Button size="sm" className="hover:bg-[#5CA62D] text-[#5CA62D] border-[1px] border-[#5CA62D] hover:text-[#fff] bg-[#fffff] font-bold">
+          <Share2 className="w-6 h-6" />
+          
+          Share
+        </Button>
+      </div>
     </div>
   );
 };

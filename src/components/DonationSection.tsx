@@ -4,7 +4,7 @@ import { HandHelping } from "lucide-react";
 
 export const DonationSection = () => {
   return (
-    <div className="relative py-24 bg-white">
+    <div className="relative pb-6 md:py-8  bg-white">
       {/* Background Video */}
       {/* <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-black/60 z-10" />
@@ -20,7 +20,7 @@ export const DonationSection = () => {
       </div> */}
 
       <div className="container relative z-20">
-        <div className=" flex flex-col gap-4">
+        <div className=" flex flex-col lg:flex-row gap-4">
           <div className="w-full">
             <QrCodeDisplay />
           </div>
@@ -33,10 +33,10 @@ export const DonationSection = () => {
               opportunities for girls who dream of a better future. Every donation,
               no matter how small, has the power to transform lives.
             </p>
-            <Button size="lg" className="bg-[#5CA62D] text-[#fff] hover:bg-[#6ec537] font-bold">
-            <HandHelping className="w-6 h-6" />
-              Donate Now
-            </Button>
+            <Button size="sm" className="hover:bg-[#5CA62D] text-[#5CA62D] border-[1px] border-[#5CA62D] hover:text-[#fff] bg-[#fffff] font-bold">
+          <HandHelping className="w-6 h-6" />
+          Donate
+        </Button>
           </div>
 
 

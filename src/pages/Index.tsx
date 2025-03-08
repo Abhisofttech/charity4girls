@@ -8,12 +8,12 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
-      <main className="pt-16">
-        <div className="w-full flex justify-center items-center py-4 text-[16px] lg:text-[24px] font-bold bg-[#5CA62D] text-white"> New Shiny Media & Social Welfare Association</div>
-      <DonationSection />
+
+      <main className="pt-16 lg:pt-20 xl:pt-24">
+        <div className="w-full flex justify-center items-center py-4 text-[16px] lg:text-[24px] xl:text-[30px] font-bold bg-[#5CA62D] text-white"> New Shiny Media & Social Welfare Association</div>
+        <DonationSection />
         <HeroCarousel />
-       
+
       </main>
 
       <Footer />

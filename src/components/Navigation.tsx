@@ -15,20 +15,20 @@ export const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
-      <div className="container flex items-center justify-between h-16">
+      <div className="container flex items-center justify-between h-16 lg:h-20 xl:h-24">
         <div className="flex flex-col items-start gap-1  font-medium text-[#5CA62D]">
-          <span className="flex  items-center gap-2 text-lg font-medium text-[#5CA62D]">
-            <img src="./images/NewShinyMediaLogo.jpg" alt="Logo" className="w-8 h-8 border border-[#5CA62D] rounded" /> NSMSWA
+          <span className="flex  items-center gap-2 text-lg lg:text-xl xl:text-2xl font-medium text-[#5CA62D]">
+            <img src="./images/NewShinyMediaLogo.jpg" alt="Logo" className="w-8 h-8 lg:w-10 lg:h-10 xl:h-14 xl:w-14 border border-[#5CA62D] rounded" /> NSMSWA
           </span>
-          <p className="text-black text-[12px]">CIN : U85499DL2023NPL415242</p>
+          <p className="text-black text-[12px] lg:text-[14px] xl:text-[16px]">CIN : U85499DL2023NPL415242</p>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
-            <Button key={item.name} variant="ghost" asChild>
-              <Link to={item.path} className="flex items-center gap-2  hover:bg-[#5CA62D] hover:text-[#fff]">
-                <item.icon className="w-4 h-4" />
+            <Button key={item.name} variant="ghost" asChild className="w-full justify-start hover:bg-[#5CA62D] hover:text-white transition-colors lg:text-[16px] xl:text-[20px]">
+              <Link to={item.path} className="flex items-center gap-2">
+                <item.icon className=" w-4 h-4 " />
                 {item.name}
               </Link>
             </Button>
@@ -45,8 +45,13 @@ export const Navigation = () => {
           <SheetContent>
             <div className="flex flex-col gap-4 mt-8">
               {navItems.map((item) => (
-                <Button key={item.name} variant="ghost" asChild className="w-full justify-start">
-                  <Link to={item.path} className="flex items-center gap-2 text-[#5CA62D] ">
+                <Button 
+                  key={item.name} 
+                  variant="ghost" 
+                  asChild 
+                  className="w-full justify-start hover:bg-[#5CA62D] hover:text-white transition-colors"
+                >
+                  <Link to={item.path} className="flex items-center gap-2">
                     <item.icon className="w-4 h-4" />
                     {item.name}
                   </Link>
