@@ -33,7 +33,7 @@ export const HeroCarousel = () => {
   }, []);
 
   return (
-    <div className="relative h-[55vh]  w-full overflow-hidden">
+    <div className="relative h-[20vh] lg:h-[30vh] xl:h-[55vh]  w-full overflow-hidden">
       {carouselItems.map((item, index) => (
         <div
           key={index}
@@ -50,8 +50,8 @@ export const HeroCarousel = () => {
           />
           <div className="absolute inset-0 z-20 flex items-center justify-center">
             <div className="text-center text-white max-w-3xl px-4">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">{item.title}</h2>
-              <p className="text-lg md:text-xl mb-8">{item.description}</p>
+              <h2 className=" text-xl lg:text-4xl md:text-5xl font-bold mb-4">{item.title}</h2>
+              <p className=" text-base lg:text-lg md:text-xl mb-8">{item.description}</p>
             </div>
           </div>
         </div>

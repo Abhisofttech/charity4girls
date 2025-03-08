@@ -15,17 +15,17 @@ export const QrCodeDisplay = ({ size = "32", className = "" }: QrCodeDisplayProp
 
         <img src="/images/shinyMediaQR.jpg" alt="QR Code" className="h-full w-full object-cover border-2 border-[#5CA62D] rounded-md" />
       </div>
-      <p className="text-center my-2 text-lg font-bold  text-[#5CA62D]">
+      <p className="text-center my-2 lg:my-6 text-lg lg:text-xl xl:text-2xl font-bold  text-[#5CA62D]">
         Scan to donate directly
       </p>
       <div className="w-full flex justify-around">
-        <Button size="sm" className="hover:bg-[#5CA62D] text-[#5CA62D] border-[1px] border-[#5CA62D] hover:text-[#fff] bg-[#fffff] font-bold">
+        <Button size="sm" className="hover:bg-[#5CA62D] text-[#5CA62D] border-[1px] border-[#5CA62D] hover:text-[#fff] bg-[#fffff] font-bold lg:text-lg xl:text-xl">
           <Download className="w-6 h-6" />
          
           Download
         </Button>
-        <Button size="sm" className="hover:bg-[#5CA62D] text-[#5CA62D] border-[1px] border-[#5CA62D] hover:text-[#fff] bg-[#fffff] font-bold">
-          <Share2 className="w-6 h-6" />
+        <Button size="sm" className="hover:bg-[#5CA62D] text-[#5CA62D] border-[1px] border-[#5CA62D] hover:text-[#fff] bg-[#fffff] font-bold lg:text-lg xl:text-xl">
+          <Share2 className="w-6 h-6 " />
           
           Share
         </Button>

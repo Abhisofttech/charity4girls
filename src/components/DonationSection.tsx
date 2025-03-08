@@ -33,7 +33,7 @@ export const DonationSection = () => {
               opportunities for girls who dream of a better future. Every donation,
               no matter how small, has the power to transform lives.
             </p>
-            <Button size="sm" className="hover:bg-[#5CA62D] text-[#5CA62D] border-[1px] border-[#5CA62D] hover:text-[#fff] bg-[#fffff] font-bold">
+            <Button size="sm" className="hover:bg-[#5CA62D] text-[#5CA62D] border-[1px] border-[#5CA62D] hover:text-[#fff] bg-[#fffff] font-bold lg:text-lg xl:text-xl">
           <HandHelping className="w-6 h-6" />
           Donate
         </Button>
