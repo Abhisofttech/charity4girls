@@ -6,7 +6,7 @@ const RequestVedio = () => {
   const [isVideoLoading, setIsVideoLoading] = useState(true);
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="container p-3">
       <motion.div 
         className="text-center mb-8"
         initial={{ opacity: 0, y: -20 }}
@@ -25,7 +25,7 @@ const RequestVedio = () => {
           </div>
         )}
         <video
-          className="w-full h-auto"
+          className="w-full h-auto min-w-[250px] "
           controls
           preload="metadata"
           playsInline
