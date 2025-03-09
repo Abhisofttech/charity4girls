@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { QrCodeDisplay } from "./QrCodeDisplay";
 import { HandHelping } from "lucide-react";
+import RequestVedio from "./RequestVedio";
 
 export const DonationSection = () => {
   return (
@@ -24,20 +25,20 @@ export const DonationSection = () => {
           <div className="w-full">
             <QrCodeDisplay />
           </div>
-          <div className="text-white w-full flex flex-col  justify-center">
+          <div className="w-full flex flex-col justify-center">
+              {/* <div className="relative w-full rounded-lg border-2 border-[#5CA62D] overflow-hidden mb-6">
+                <video
+                  className="w-full h-auto"
+                  controls
+                  preload="metadata"
+                  poster="/placeholder.svg"
+                >
+                  <source src="/placeholder.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div> */}
 
-            <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-6 text-[#5CA62D]">
-              Make a Difference Today
-            </h2>
-            <p className="text-sm lg:text-lg mb-8 text-black">
-              Your contribution can help provide education, develop skills, and create
-              opportunities for girls who dream of a better future. Every donation,
-              no matter how small, has the power to transform lives.
-            </p>
-            <Button size="sm" className="hover:bg-[#5CA62D] text-[#5CA62D] border-[1px] border-[#5CA62D] hover:text-[#fff] bg-[#fffff] font-bold lg:text-lg xl:text-xl">
-              <HandHelping className="w-6 h-6" />
-              Donate
-            </Button>
+           <RequestVedio />
           </div>
 
 

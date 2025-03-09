@@ -20,7 +20,7 @@ const Donate = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-[36px] leading-tight font-bold mt-4 py-2 px-6 rounded-lg bg-[#5CA62D] text-white ]"
+            className="text-lg lg:text-[36px] leading-tight font-bold mt-4 py-2 px-6 rounded-lg bg-[#5CA62D] text-white ]"
           >
             Make a Difference
           </motion.h1>

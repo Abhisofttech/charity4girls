@@ -4,62 +4,78 @@ import { Button } from "@/components/ui/button";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-950 text-gray-200">
-      <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">New Shiny Media & Social Welfare Association</h3>
-            <p className="text-gray-400">
+    <footer className="bg-[#5CA62D] text-white border-t-2 border-black">
+      <div className="container py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          {/* Brand Section */}
+          <div className="col-span-2">
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src="./images/NewShinyMediaLogo.jpg" 
+                alt="Logo" 
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded bg-white border-2 border-white" 
+              />
+              <h3 className="text-lg sm:text-xl font-bold text-white">
+                New Shiny Media & Social Welfare Association
+              </h3>
+            </div>
+            <p className="text-white/90 text-sm sm:text-base leading-relaxed">
               Empowering girls through education, skills development, and creating
               opportunities for a brighter future.
             </p>
-          </div>
           
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><a href="/about" className="hover:text-white transition">About Us</a></li>
-              <li><a href="/contact" className="hover:text-white transition">Contact</a></li>
-              <li><a href="/donate" className="hover:text-white transition">Donate</a></li>
+          </div>
+
+          {/* Quick Links */}
+          <div className="mt-4 sm:mt-0">
+            <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+            <ul className="space-y-3">
+              {['About Us', 'Contact', 'Donate'].map((item) => (
+                <li key={item}>
+                  <a 
+                    href={`/${item.toLowerCase().replace(' ', '')}`} 
+                    className="text-white/90 hover:text-white transition-colors flex items-center gap-2 text-sm sm:text-base"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-white/60" />
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-            <ul className="space-y-2">
-              <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4" />
-                <span>sunitasri74@gmail.com</span>
+
+          {/* Contact Info */}
+          <div className="mt-4 sm:mt-0">
+            <h4 className="text-lg font-semibold mb-4 text-white">Contact Info</h4>
+            <ul className="space-y-3">
+              <li>
+                <a 
+                  href="mailto:sunitasri74@gmail.com" 
+                  className="text-white/90 hover:text-white transition-colors flex items-center gap-3 text-sm sm:text-base"
+                >
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+                  sunitasri74@gmail.com
+                </a>
               </li>
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                <span>9560638073</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <MapPin className="h-4 w-4" />
-                <span>123 Charity Street, City</span>
+              <li>
+                <a 
+                  href="tel:9560638073" 
+                  className="text-white/90 hover:text-white transition-colors flex items-center gap-3 text-sm sm:text-base"
+                >
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+                  +91 9560638073
+                </a>
               </li>
             </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
-            <div className="flex gap-4">
-              <Button variant="ghost" size="icon" className="hover:text-white">
-                <Facebook className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:text-white">
-                <Instagram className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:text-white">
-                <Twitter className="h-5 w-5" />
-              </Button>
-            </div>
           </div>
         </div>
-        
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-400">
-          <p>© 2024 CharityForGirl. All rights reserved.</p>
+
+        {/* Copyright */}
+        <div className="border-t border-white/20 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center">
+          <p className="text-white/90 text-sm">
+            © 2024 <span className="text-white font-medium">CharityForGirl</span>. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
