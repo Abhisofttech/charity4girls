@@ -13,7 +13,7 @@ export const QrCodeDisplay = ({ size = "32", className = "" }: QrCodeDisplayProp
       <div className="aspect-square w-[200px] h-[260px] lg:w-[235px] lg:h-[315px] xl:w-[260px] xl:h-[340px] bg-gray-100 rounded-lg flex items-center justify-center">
         {/* <QrCode className="w-32 h-32" /> */}
 
-        <img src="/images/shinyMediaQR.jpg" alt="QR Code" className="h-full w-full object-cover border-2 border-[#5CA62D] rounded-md" />
+        <img src="/images/NewShinyMediaQR.jpg" alt="QR Code" className="h-full w-full object-cover border-2 border-[#5CA62D] rounded-md" />
       </div>
       <p className="text-center my-2 lg:my-6 text-lg lg:text-xl xl:text-2xl font-bold  text-[#5CA62D]">
         Scan to donate directly
@@ -24,7 +24,7 @@ export const QrCodeDisplay = ({ size = "32", className = "" }: QrCodeDisplayProp
           className="hover:bg-[#5CA62D] text-[#5CA62D] border-[1px] border-[#5CA62D] hover:text-[#fff] bg-[#fffff] font-bold lg:text-lg xl:text-xl"
           onClick={() => {
             const link = document.createElement('a');
-            link.href = '/images/shinyMediaQR.jpg';
+            link.href = '/images/NewShinyMediaQR.jpg';
             link.download = 'New-Shiny-Media-Social-Welfare-Assosciatopn-QR.jpg';
             document.body.appendChild(link);
             link.click();

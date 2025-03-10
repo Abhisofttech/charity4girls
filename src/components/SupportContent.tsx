@@ -14,24 +14,7 @@ const SupportContent = () => {
             <motion.div 
                 className="bg-white rounded-xl shadow-lg overflow-hidden"
                 {...fadeIn}
-            >
-                {/* Header Section */}
-                <motion.div 
-                    className="bg-red-600 p-4 sm:p-6 lg:p-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
-                    animate={{ 
-                        backgroundColor: ['#dc2626', '#ea580c', '#dc2626']
-                    }}
-                    transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                    }}
-                >
-                    <AlertTriangle className="w-6 h-6 sm:w-8 sm:h-8 text-white animate-pulse" />
-                    <h2 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white">
-                        Current Status & Support Needed
-                    </h2>
-                </motion.div>
+            > 
 
                 {/* Content Section */}
                 <div className="p-4 sm:p-6 lg:p-8 bg-gradient-to-br from-[#5CA62D] to-[#4a8924]">
